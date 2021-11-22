@@ -48,3 +48,4 @@ def h_diff(equation, by, nonsimplify):
         result = nsimplify(diff(equation, by))
     print(pretty(result))
     return result
+

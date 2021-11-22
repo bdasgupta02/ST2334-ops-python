@@ -10,6 +10,7 @@ f, g, h = symbols('f g h', cls=Function)
 # Notes:
 # - need all those distribution functions to solve algebra
 # - alpha = 1 - CI percentage
+# - be careful of 
 
 # Symbols:
 # - oo
@@ -37,6 +38,6 @@ f, g, h = symbols('f g h', cls=Function)
 
 
 
-calc = convertT(0.050, 7)
+calc = 1-stats.binom.cdf(9, 20, 0.3)
 
 pprint(calc)

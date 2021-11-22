@@ -1,0 +1,58 @@
+X ~ B(10,0.4), where X = number of successes, with number of trials = 10 and prob of a success = 0.4
+To find Pr(X <= 5), 'stats.binom.cdf(5,10,0.4)' gives 0.833761
+To find Pr(X = 5), 'stats.binom.pmf(5,10,0.4)' gives 0.200658
+To find Pr(X > 5), '1-stats.binom.cdf(5,10,0.4)' gives 0.166239
+To find x such that Pr(X <= x) >= 0.05, 'stats.binom.ppf(0.05,10,0.4)' gives 2
+##############################################
+
+X ~ NB(4,0.55), where X = number of trials, with number of successes = 4 and prob of a success = 0.55
+To find Pr(X <= 6), 'stats.nbinom.cdf(2,4,0.55)' gives 0.441518 , where 2 = number of failures
+To find Pr(X = 6), 'stats.nbinom.pmf(2,4,0.55)' gives 0.1853
+To find Pr(X > 6), '1-stats.nbinom.cdf(2,4,0.55)' gives 0.558482
+To find x such that Pr(X <= x) >= 0.25, 'stats.binom.ppf(0.25,4,0.55)' gives 1 which is the number of failures. Hence, x = 5
+##############################################
+
+X ~ P(8), where E(X) = lambda = 8
+To find Pr(X <= 6), 'stats.poisson.cdf(6,8)' gives 0.313374
+To find Pr(X = 6), 'stats.poisson.pmf(6,8)' gives 0.122138
+To find Pr(X > 6), '1-stats.poisson.cdf(6,8)' gives 0.686626
+To find x such that Pr(X <= x) >= 0.25, 'stats.poisson.ppf(0.25,8)' gives 6
+##############################################
+
+X ~ Exp(1/5), where E(X) = 5
+To find Pr(X <= 8), 'stats.expon.cdf(8,0,5)' gives 0.798103 with the second argument being the lower limit of the x range and 3rd argument = E(X)
+To find pdf f(8), 'stats.expon.pdf(8,0,5)' gives 0.0403793
+To find Pr(X > 8), '1-stats.expon.cdf(8,0,5)' gives 0.201897
+To find x such that Pr(X <= x) = 0.05, 'stats.expon.ppf(0.05,0,5)' gives 0.256466
+##############################################
+
+X ~ N(50, 10^2), where mu=E(X)=50 and sigma^2=V(X)=10^2
+To find Pr(X <= 45), 'stats.norm.cdf(45,50,10)' gives 0.308538
+To find pdf f(45), 'stats.norm.pdf(45,50,10)' gives 0.0352065
+To find Pr(X > 45), '1-stats.norm.cdf(45,50,10)' gives 0.691462
+To find x such that Pr(X <= x) = 0.05, 'stats.norm.ppf(0.05,50,10)' gives 33.5515
+To find z such that Pr(Z >= z) = 0.05 with Z ~ N(0,1), 'stats.norm.ppf(0.95,0,1)' gives 1.64485
+##############################################
+
+X ~ t(10), where degrees of freedom = 10
+To find Pr(X <= 1.5), 'stats.t.cdf(1.5,10)' gives 0.917746
+To find pdf f(1.5), 'stats.t.pdf(1.5,10)' gives 0.127445
+To find Pr(X > 1.5), '1-stats.t.cdf(1.5,10)' gives 0.0822537
+To find x such that Pr(X <= x) = 0.05, 'stats.t.ppf(0.05,10)' gives -1.81246
+To find x such that Pr(X >= x) = 0.05, 'stats.t.ppf(0.95,10)' gives 1.81246
+##############################################
+
+X ~ Chisq(10), where degrees of freedom = 10
+To find Pr(X <= 12), 'stats.chi2.cdf(12,10)' gives 0.714943
+To find pdf f(12), 'stats.chi2.pdf(12,10)' gives 0.0669263
+To find Pr(X > 12), '1-stats.chi2.cdf(12,10)' gives 0.285057
+To find x such that Pr(X <= x) = 0.05, 'stats.chi2.ppf(0.05,10)' gives 3.9403
+To find x such that Pr(X >= x) = 0.05, 'stats.chi2.ppf(0.95,10)' gives 18.307
+##############################################
+
+X ~ F(12,10), where degrees of freedom are 12 and 10
+To find Pr(X <= 3), 'stats.f.cdf(3,12,10)' gives 0.954299
+To find pdf f(3), 'stats.f.pdf(3,12,10)' gives 0.046852
+To find Pr(X > 3), '1-stats.f.cdf(3,12,10)' gives 0.0457007
+To find x such that Pr(X <= x) = 0.05, 'stats.f.ppf(0.05,12,10)' gives 0.363189
+To find x such that Pr(X >= x) = 0.05, 'stats.f.ppf(0.95,10)' gives 2.91298
