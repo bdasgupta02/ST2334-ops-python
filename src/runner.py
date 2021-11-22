@@ -38,6 +38,6 @@ f, g, h = symbols('f g h', cls=Function)
 
 
 
-calc = 1-stats.binom.cdf(9, 20, 0.3)
+calc = stats.binom(10000, 1/1000).var()
 
 pprint(calc)
