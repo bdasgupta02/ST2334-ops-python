@@ -58,9 +58,12 @@ To find Pr(X <= 8), 'stats.expon.cdf(8,0,5)' gives 0.798103 with the second argu
 To find pdf f(8), 'stats.expon.pdf(8,0,5)' gives 0.0403793
 To find Pr(X > 8), '1-stats.expon.cdf(8,0,5)' gives 0.201897
 To find x such that Pr(X <= x) = 0.05, 'stats.expon.ppf(0.05,0,5)' gives 0.256466
+For E(X) = 1/alpha
+For V(X) = 1/alpha**2
 ##############################################
 
 Normal distribution
+(put sigma instead of actual sigma^2)
 
 X ~ N(50, 10^2), where mu=E(X)=50 and sigma^2=V(X)=10^2
 To find Pr(X <= 45), 'stats.norm.cdf(45,50,10)' gives 0.308538

@@ -38,6 +38,6 @@ f, g, h = symbols('f g h', cls=Function)
 
 
 
-calc = stats.poisson(2).pmf(0)
+calc = stats.norm.cdf(224, 200, 15)
 
 pprint(calc)
