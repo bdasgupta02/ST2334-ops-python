@@ -1,3 +1,8 @@
+========
+DISCRETE
+========
+
+
 Binomial distribution
 
 X ~ B(10,0.4), where X = number of successes, with number of trials = 10 and prob of a success = 0.4
@@ -5,19 +10,22 @@ To find Pr(X <= 5), 'stats.binom.cdf(5,10,0.4)' gives 0.833761
 To find Pr(X = 5), 'stats.binom.pmf(5,10,0.4)' gives 0.200658
 To find Pr(X > 5), '1-stats.binom.cdf(5,10,0.4)' gives 0.166239
 To find x such that Pr(X <= x) >= 0.05, 'stats.binom.ppf(0.05,10,0.4)' gives 2
-
 To find E(X), 'stats.binom.mean(n, p)' 
 To find V(X), 'stats.binom.var(n, p)'
 
 ##############################################
 
 Negative binomial distribution
+(no. of failures)
+(Geometric dist. is just nbinom with 1 n. success)
 
 X ~ NB(4,0.55), where X = number of trials, with number of successes = 4 and prob of a success = 0.55
 To find Pr(X <= 6), 'stats.nbinom.cdf(2,4,0.55)' gives 0.441518 , where 2 = number of failures
 To find Pr(X = 6), 'stats.nbinom.pmf(2,4,0.55)' gives 0.1853
 To find Pr(X > 6), '1-stats.nbinom.cdf(2,4,0.55)' gives 0.558482
 To find x such that Pr(X <= x) >= 0.25, 'stats.binom.ppf(0.25,4,0.55)' gives 1 which is the number of failures. Hence, x = 5
+To find E(X), k / p 
+To find V(X), 'stats.nbinom(k, p).var()'
 ##############################################
 
 Poisson distribution
@@ -27,7 +35,21 @@ To find Pr(X <= 6), 'stats.poisson.cdf(6,8)' gives 0.313374
 To find Pr(X = 6), 'stats.poisson.pmf(6,8)' gives 0.122138
 To find Pr(X > 6), '1-stats.poisson.cdf(6,8)' gives 0.686626
 To find x such that Pr(X <= x) >= 0.25, 'stats.poisson.ppf(0.25,8)' gives 6
+For E(X) = lambda
+For V(X) = lambda
 ##############################################
+
+
+
+
+
+
+
+
+==========
+CONTINUOUS
+==========
+
 
 Exponential distribution
 
@@ -77,6 +99,13 @@ To find Pr(X > 3), '1-stats.f.cdf(3,12,10)' gives 0.0457007
 To find x such that Pr(X <= x) = 0.05, 'stats.f.ppf(0.05,12,10)' gives 0.363189
 To find x such that Pr(X >= x) = 0.05, 'stats.f.ppf(0.95,10)' gives 2.91298
 ##############################################
+
+
+
+
+
+
+
 
 Chebyshev's
 For K = 2 we have 1 – 1/K2 = 1 - 1/4 = 3/4 = 75%. ...

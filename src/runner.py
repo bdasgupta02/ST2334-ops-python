@@ -38,6 +38,6 @@ f, g, h = symbols('f g h', cls=Function)
 
 
 
-calc = stats.binom(10000, 1/1000).var()
+calc = stats.poisson(2).pmf(0)
 
 pprint(calc)
